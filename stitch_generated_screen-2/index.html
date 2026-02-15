@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brianna Martinez | Strategic Designer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#e17660',
+              accent: '#ffd1c1',
+              bg: '#fffbf7',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          borderRadius: {
+            'custom': '12px',
+          },
+          animation: {
+            'marquee': 'marquee 40s linear infinite',
+            'float': 'float 10s ease-in-out infinite',
+            'ticker': 'ticker 30s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            ticker: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #fffbf7;
+      overflow-x: hidden;
+    }
+
+    .watercolor-blob {
+      filter: blur(80px);
+      opacity: 0.4;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .card-stack {
+      perspective: 1000px;
+    }
+
+    .italic-serif {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    .text-outline {
+      -webkit-text-stroke: 1px rgba(225, 118, 96, 0.15);
+      color: transparent;
+    }
+  </style>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script></head>
+<body class="font-sans text-stone-800 antialiased">
+<!-- BEGIN: Background Elements -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+<!-- Watercolor Blobs -->
+<div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-accent rounded-full watercolor-blob animate-float"></div>
+<div class="absolute bottom-[10%] right-[-5%] w-[600px] h-[600px] bg-[#ffe6dc] rounded-full watercolor-blob animate-float" style="animation-delay: -3s;"></div>
+<!-- Background Marquee -->
+<div class="absolute top-1/2 left-0 w-full -translate-y-1/2 opacity-[0.03] select-none pointer-events-none">
+<div class="flex whitespace-nowrap animate-marquee text-[20vw] font-bold tracking-tighter uppercase"><span class="mr-24">Brianna Martinez</span><span class="mr-24 italic-serif">Brianna Martinez</span><span class="mr-24">Brianna Martinez</span><span class="mr-24 italic-serif">Brianna Martinez</span><span class="mr-24">Brianna Martinez</span><span class="mr-24 italic-serif">Brianna Martinez</span></div>
+</div>
+</div>
+<!-- END: Background Elements -->
+<!-- BEGIN: Fixed Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-brand-bg/80 backdrop-blur-sm border-b border-stone-100">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="text-xl font-medium tracking-tight">
+<a class="hover:text-brand-primary transition-colors" href="#">Brianna Martinez</a>
+</div>
+<div class="hidden md:flex items-center space-x-10 text-sm font-medium uppercase tracking-widest text-stone-500"><a class="hover:text-brand-primary transition-colors" href="#work">Featured Work</a>
+<a class="hover:text-brand-primary transition-colors" href="#about">About</a></div>
+<div>
+<a class="bg-brand-primary text-white px-6 py-2.5 rounded-custom text-sm font-medium hover:opacity-90 transition-all shadow-sm" href="#inquire">
+          Inquire
+        </a>
+</div>
+</div>
+</nav>
+<!-- END: Fixed Navigation -->
+<!-- BEGIN: Main Content -->
+<main class="pt-32">
+<!-- BEGIN: Hero Section (Interactive Card Pile) -->
+<section class="relative min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-visible" data-purpose="hero-section">
+<div class="relative w-full max-w-xl mx-auto card-stack">
+<!-- Bottom Card -->
+<div class="absolute inset-0 bg-stone-200 rounded-custom shadow-lg rotate-[-3deg] md:rotate-[-6deg] translate-y-2 md:translate-y-4 -z-30 opacity-40"></div>
+<!-- Middle Card -->
+<div class="absolute inset-0 bg-brand-accent/30 rounded-custom shadow-xl rotate-[1.5deg] md:rotate-[3deg] -translate-y-1 md:-translate-y-2 -z-20 border border-brand-accent/50"></div>
+<!-- Main Card -->
+<div class="relative bg-white p-6 md:p-12 rounded-custom shadow-2xl z-10 border border-stone-100 flex flex-col items-center text-center">
+<div class="w-28 h-28 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 md:mb-8 border-4 border-brand-bg shadow-inner">
+<img alt="Brianna Martinez Portrait" class="w-full h-full object-cover" src="{{DATA:IMAGE:IMAGE_2}}"/>
+</div>
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-light leading-tight mb-6">Designing for <br/>
+<span class="italic-serif text-brand-primary">storytelling</span> &amp; collaboration.</h1>
+<p class="max-w-md text-stone-500 text-base md:text-xl leading-relaxed mb-8 md:10">Multi-faceted graphic designer and communicator turning your ideas into clear, engaging visuals to support your organization's goals</p>
+<a class="group flex items-center space-x-3 text-stone-800 font-semibold text-base md:text-lg hover:text-brand-primary transition-colors" href="#work"><span>More About Brianna</span><svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+</div>
+</div>
+</section><div class="w-full overflow-hidden py-8 select-none bg-brand-bg relative z-0">
+<div class="flex whitespace-nowrap animate-marquee">
+<!-- First set of skills -->
+<div class="flex items-center space-x-6 px-3">
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Graphic Design</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Adobe Creative Cloud</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Canva</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Photography</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Cross-Functional Collaboration</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">File Prep for Print &amp; Web</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Photo Editing</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Brand Identity</span>
+</div>
+</div>
+<!-- Duplicate set for infinite loop -->
+<div class="flex items-center space-x-6 px-3">
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Graphic Design</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Adobe Creative Cloud</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Canva</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Photography</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Cross-Functional Collaboration</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">File Prep for Print &amp; Web</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Photo Editing</span>
+</div>
+<div class="flex items-center space-x-2 px-4 py-2 rounded-full border border-stone-200 bg-white/50 backdrop-blur-sm">
+<iconify-icon class="text-brand-primary text-lg" icon="solar:check-circle-linear"></iconify-icon>
+<span class="text-sm font-medium text-stone-600">Brand Identity</span>
+</div>
+</div>
+</div>
+</div>
+<!-- END: Hero Section -->
+<!-- BEGIN: Capabilities Section -->
+<section class="py-24 bg-brand-bg" data-purpose="featured-work-section" id="work">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex mb-16 justify-center">
+<h2 class="text-4xl md:text-5xl font-light tracking-tight text-center">
+        Featured <span class="italic-serif text-brand-primary">Work</span>
+</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
+<!-- Project 1 -->
+<div class="group">
+<div class="aspect-[4/3] overflow-hidden rounded-custom mb-6 bg-stone-100">
+<img alt="Brand Narrative Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{DATA:IMAGE:IMAGE_2}}"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-medium">Brand Narrative</h3>
+<button class="text-brand-primary text-sm font-semibold uppercase tracking-wider hover:underline" onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">+ Project Info</button>
+</div>
+<div class="hidden mt-6 pt-6 border-t border-stone-200 text-stone-600 space-y-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Context</p>
+<p>Defining the visual voice for a boutique hospitality group looking to redefine luxury through heritage.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Tools Used</p>
+<p class="text-sm">Illustrator, InDesign, MidJourney</p>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Results</p>
+<p class="text-sm">40% increase in direct bookings via new visual storytelling.</p>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Key Learnings</p>
+<ul class="list-disc list-inside text-sm">
+<li>Subtlety often speaks louder than excess in luxury branding.</li>
+<li>Color theory impact on mood in physical spaces.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group">
+<div class="aspect-[4/3] overflow-hidden rounded-custom mb-6 bg-stone-100">
+<img alt="Visual Strategy Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{DATA:IMAGE:IMAGE_2}}"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-medium">Visual Strategy</h3>
+<button class="text-brand-primary text-sm font-semibold uppercase tracking-wider hover:underline" onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">+ Project Info</button>
+</div>
+<div class="hidden mt-6 pt-6 border-t border-stone-200 text-stone-600 space-y-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Context</p>
+<p>Comprehensive strategy for an ed-tech startup to simplify complex data for students.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Tools Used</p>
+<p class="text-sm">Figma, Miro, Adobe XD</p>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Results</p>
+<p class="text-sm">Simplified user journey resulting in 25% higher retention.</p>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Key Learnings</p>
+<ul class="list-disc list-inside text-sm">
+<li>Information architecture is the backbone of aesthetic.</li>
+<li>Accessibility in color choice for diverse users.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group">
+<div class="aspect-[4/3] overflow-hidden rounded-custom mb-6 bg-stone-100">
+<img alt="Digital Experience Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{DATA:IMAGE:IMAGE_2}}"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-medium">Digital Experience</h3>
+<button class="text-brand-primary text-sm font-semibold uppercase tracking-wider hover:underline" onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">+ Project Info</button>
+</div>
+<div class="hidden mt-6 pt-6 border-t border-stone-200 text-stone-600 space-y-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Context</p>
+<p>Designing a seamless e-commerce experience for a sustainable fashion brand.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Tools Used</p>
+<p class="text-sm">Shopify, Figma, After Effects</p>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Results</p>
+<p class="text-sm">Reduced cart abandonment by 15% through tactile interactions.</p>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Key Learnings</p>
+<ul class="list-disc list-inside text-sm">
+<li>Micro-interactions bridge the gap to physical texture.</li>
+<li>Speed is as important as style in digital retail.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group">
+<div class="aspect-[4/3] overflow-hidden rounded-custom mb-6 bg-stone-100">
+<img alt="Editorial Identity Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="{{DATA:IMAGE:IMAGE_2}}"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-medium">Editorial Identity</h3>
+<button class="text-brand-primary text-sm font-semibold uppercase tracking-wider hover:underline" onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">+ Project Info</button>
+</div>
+<div class="hidden mt-6 pt-6 border-t border-stone-200 text-stone-600 space-y-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Context</p>
+<p>A print and digital quarterly focused on slow living and conscious design.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Tools Used</p>
+<p class="text-sm">InDesign, Lightroom, Typography Design</p>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Results</p>
+<p class="text-sm">Sold out first two print runs within 48 hours of launch.</p>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Key Learnings</p>
+<ul class="list-disc list-inside text-sm">
+<li>Grid systems are for breaking once they are mastered.</li>
+<li>Whitespace is the most powerful editorial tool.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 bg-brand-bg border-t border-stone-100" data-purpose="about-section" id="about">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+<!-- Left Column: Image -->
+<div class="relative col-span-1 md:col-span-4 lg:col-span-3 max-w-[280px] md:max-w-none mx-auto md:mx-0">
+<div class="absolute -inset-4 bg-brand-accent/20 rounded-custom -rotate-3 -z-10"></div>
+<div class="aspect-[3/4] overflow-hidden rounded-custom shadow-xl border border-stone-100">
+<img alt="Brianna Martinez Portrait" class="w-full h-full object-cover" src="{{DATA:IMAGE:IMAGE_4}}"/>
+</div>
+</div>
+<!-- Right Column: Text Content -->
+<div class="flex flex-col space-y-8 md:col-span-8 lg:col-span-9">
+<h2 class="text-4xl md:text-5xl font-light tracking-tight">
+          Designing with <span class="italic-serif text-brand-primary">Intention</span>
+</h2>
+<div class="space-y-6 text-stone-600 text-lg leading-relaxed">
+<p>
+            With over a decade of experience in the creative industry, I've learned that great design isn't just about how things look, but how they solve problems and connect people. My approach is rooted in a deep understanding of strategy and a passion for storytelling, ensuring that every visual I create serves a clear purpose for your organization.
+          </p>
+<p>
+            I bring a steady, collaborative hand to every project, turning complex ideas into clear, engaging narratives. Whether I'm building a brand from the ground up or refining a digital experience, my goal is always to deliver work that resonates deeply and performs exceptionally.
+          </p>
+</div>
+<div class="pt-4">
+<a class="inline-flex items-center space-x-2 text-stone-800 font-semibold text-lg hover:text-brand-primary transition-colors group" href="#inquire">
+<span>Let's collaborate</span>
+<iconify-icon class="group-hover:translate-x-1 transition-transform" icon="solar:arrow-right-linear"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Capabilities Section -->
+</main>
+<!-- END: Main Content -->
+<!-- BEGIN: Footer -->
+<footer class="bg-white pt-24 pb-12 mt-20 border-t border-stone-100" data-purpose="main-footer">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-12 mb-20">
+<div>
+<h2 class="text-5xl md:text-7xl font-light tracking-tight max-w-2xl mb-8 text-4xl md:text-6xl lg:text-7xl">Ready to elevate your <span class="italic-serif text-brand-primary">narrative?</span></h2>
+<a class="text-2xl md:text-3xl text-stone-400 hover:text-brand-primary transition-colors underline underline-offset-8 decoration-1" href="mailto:hello@briannamartinez.com">
+            hello@briannamartinez.com
+          </a>
+</div>
+<div class="w-full max-w-sm flex md:justify-end">
+<a class="group flex items-center space-x-2 text-xl md:text-2xl font-light hover:text-brand-primary transition-colors" href="#">
+<span class="italic-serif">Download Resume</span>
+<iconify-icon class="text-brand-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" icon="solar:arrow-right-up-linear"></iconify-icon>
+</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center border-t border-stone-100 pt-12 text-sm text-stone-400">
+<div class="mb-6 md:mb-0">© 2024 Brianna Martinez — Strategic Designer</div></div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
